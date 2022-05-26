@@ -7,6 +7,7 @@
     <title>Carrefour | "Vem Fazer Carrefour"</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <style>
+        /*🦲💰🛍🤍0️⃣*/
         :root {
             --verde:#009c3b;
             --amarelo:#ffdf00;
@@ -119,19 +120,42 @@
         #nav {
             width: 100%;
             height: 60px;
-            background-color: #002776;
             display: flex;
         }
 
         #logo {
             width: auto;
             height: auto;
-            display: flex;
+            margin: 12px 0px 0px 50px;
         }
 
         #logo picture img{
             width: auto;
             height: auto;
+            display: flex;
+        }
+
+        #pesquisa1 {
+            width: 320px;
+            height: 30px;
+            margin: 10px 0px 0px 20px;
+        }
+
+        #pesquisa2 {
+            width: 50px;
+            height: 36px;
+            margin-left: 1px;
+            padding-bottom: 3px;
+        }
+
+        .navlink {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 5px 0px 0px 65px;
+        }
+
+        #carrinho picture {
+            font-size: 30px;
+            margin: 5px 0px 0px 65px;
             display: flex;
         }
     </style>
@@ -159,12 +183,12 @@
     </header>
     <nav id="nav">
         <div id="logo"><picture><img src="img/logo.png" alt="Logo do Carrefour"></picture></div>
-        <div id="divpesquisa"><input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquise por produtos ou marcas">🔍</div>
-        <div>🦲Bem-vindo<br>Entre</div>
-        <div>💰Meu<br>Carrefour</div>
-        <div>🛍Meus<br>Pedidos</div>
-        <div>🤍Minhas<br>Listas</div>
-        <div>🛒0️⃣</div>
+        <div id="divpesquisa"><input type="text" name="pesquisa" id="pesquisa1" placeholder="Pesquise por produtos ou marcas"><input type="submit" value="&#128269" id="pesquisa2"></div>
+        <div class="navlink"><p>Bem-vindo<br>Entre</p></div>
+        <div class="navlink"><p>Meu<br>Carrefour</p></div>
+        <div class="navlink"><p>Meus<br>Pedidos</p></div>
+        <div class="navlink"><p>Minhas<br>Listas</p></div>
+        <div id="carrinho"><picture>🛒</picture></div>
     </nav>
 </body>
 </html>
