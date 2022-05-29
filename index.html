@@ -66,45 +66,31 @@
             display: flex;
         }
 
-        #abaesquerda1 {
+        .abaesquerda {
             width: auto;
             height: 29px;
-            color: #002776;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-color: white;
             border-radius: 5px 5px 0px 0px;
-            margin: 5px 5px 0px 72px;
+            margin-top: 5px; /*mudar para paddind*/
+            margin-right: 5px;
             padding-left: 5px;
             padding-right: 5px;
             cursor: pointer;
+            color: white;
+        }
+
+        #abaesquerda1 {
+            color: #002776;
+            background-color: white;
+            margin-left: 72px;
         }
 
         #abaesquerda2 {
-            width: auto;
-            height: 29px;
-            color: white;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color: #e81e26;
-            border-radius: 5px 5px 0px 0px;
-            margin-top: 5px;
-            margin-right: 5px;
-            padding-left: 5px;
-            padding-right: 5px;
-            cursor: pointer;
         }
 
         #abaesquerda3 {
-            width: auto;
-            height: 29px;
-            color: white;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             background-color: #002776;
-            border-radius: 5px 5px 0px 0px;
-            margin-top: 5px;
-            margin-right: 5px;
-            padding-left: 5px;
-            padding-right: 5px;
-            cursor: pointer;
         }
 
         #abadireita {
@@ -311,8 +297,85 @@
             }
         }
 
-        @media screen and (max-width:425px) {
-            
+        @media screen and (max-width:426px) {
+            #abaesquerda1 {
+                margin-left: 0px;
+            }
+            .abaesquerda {
+                font-size: 11px;
+                padding-left: 4px;
+                padding-top: 5px;
+                margin-right: 6px;
+                margin-top: 0px;
+                height: 34px;
+                width: 50px;
+            }
+            #atendimento {
+                display: none;
+            }
+            #click {
+                display: none;
+            }
+            .abadireita {
+                margin: 12px 8px 0px 0px;
+                text-decoration: underline;
+            }
+            #logo picture img {
+                width: 83px;
+                height: 15px;
+                padding-top: 10px;
+            }
+            #nav input {
+                width: auto;
+                margin-top: 15px;
+            }
+            #pesquisa1 {
+                max-width: 55px;
+            }
+            #minhaslistas {
+                display: none;
+            }
+            .navlink {
+                margin: 11px 8px 0px 0px;
+            }
+            #bemvindo {
+                margin-left: 13px;
+            }
+            #carrinho picture {
+                margin-left: 0px;
+            }
+            #departamentos p {
+                font-size: 11px;
+                width: 135px;
+            }
+            #departamentos {
+                margin: 10px 5px 0px 0px;
+            }
+            #mundogamer {
+                display: none;
+            }
+            #pneus {
+                display: none;
+            }
+            #xiaomi {
+                display: none;
+            }
+            #cartao {
+                display: none;
+            }
+            #carrossel {
+                height: 140px;
+            }
+            #carrossel img {
+                height: 140px;
+            }
+            #produtos img {
+                width: 170px;
+                height: 170px;
+            }
+            #footer {
+                font-size: 10px;
+            }
         }
     </style>
 </head>
@@ -324,15 +387,15 @@
         </div>
         <div id="aba">
             <div id="abaesquerda">
-                <div id="abaesquerda1">📺 SHOPPING</div>
-                <div id="abaesquerda2">🏪 MERCADO</div>
-                <div id="abaesquerda3">📦 SERVIÇOS</div>
+                <div id="abaesquerda1" class="abaesquerda">📺 SHOPPING</div>
+                <div id="abaesquerda2" class="abaesquerda">🏪 MERCADO</div>
+                <div id="abaesquerda3" class="abaesquerda">📦 SERVIÇOS</div>
             </div>
             <div id="abadireita">
                 <div class="abadireita" id="abadireita1">Televendas</div>
                 <div class="abadireita">Nossas Lojas</div>
-                <div class="abadireita">Atendimento</div>
-                <div class="abadireita">Click e Retire</div>
+                <div class="abadireita" id="atendimento">Atendimento</div>
+                <div class="abadireita" id="click">Click e Retire</div>
                 <div class="abadireita">Baixe o app</div>
             </div>
         </div>
@@ -340,24 +403,24 @@
     <nav id="nav">
         <div id="logo"><picture><img src="img/logo.png" alt="Logo do Carrefour"></picture></div>
         <div id="divpesquisa"><input type="text" name="pesquisa" id="pesquisa1" placeholder="Pesquise por produtos ou marcas"><input type="submit" value="&#128269" id="pesquisa2"></div>
-        <div class="navlink"><p>Bem-vindo<br>Entre</p></div>
+        <div class="navlink" id="bemvindo"><p>Bem-vindo<br>Entre</p></div>
         <div class="navlink" id="meucarrefour"><p>Meu<br>Carrefour</p></div>
         <div class="navlink"><p>Meus<br>Pedidos</p></div>
-        <div class="navlink"><p>Minhas<br>Listas</p></div>
+        <div class="navlink" id="minhaslistas"><p>Minhas<br>Listas</p></div>
         <div id="carrinho"><picture>🛒</picture></div>
     </nav>
     <nav id="nav2">
         <div id="departamentos"><p>Todos os Departamentos &#9660;</p></div>
         <div class="navlink2"><p>Ofertas do Dia</p></div>
-        <div class="navlink2"><p>Mundo Gamer</p></div>
+        <div class="navlink2" id="mundogamer"><p>Mundo Gamer</p></div>
         <div class="navlink2"><p>Smartphones</p></div>
-        <div class="navlink2"><p>Pneus & Auto</p></div>
-        <div class="navlink2"><p>Xiaomi</p></div>
+        <div class="navlink2" id="pneus"><p>Pneus & Auto</p></div>
+        <div class="navlink2" id="xiaomi"><p>Xiaomi</p></div>
         <div class="navlink2"><p>Notebooks</p></div>
         <div class="navlink2"><p>Eletrodomésticos</p></div>
         <div class="navlink2"><p>TVs</p></div>
         <div class="navlink2"><p>Móveis</p></div>
-        <div class="navlink2"><p>Cartão Carrefour</p></div>
+        <div class="navlink2" id="cartao"><p>Cartão Carrefour</p></div>
     </nav>
     <main>
         <div id="carrossel">
