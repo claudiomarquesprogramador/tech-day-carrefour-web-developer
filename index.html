@@ -146,6 +146,10 @@
             display: flex;
         }
 
+        #divpesquisa {
+            display: flex;
+        }
+
         #pesquisa1 {
             width: 320px;
             height: 30px;
@@ -154,10 +158,11 @@
 
         #pesquisa2 {
             width: 50px;
-            height: 36px;
+            height: 34px;
             margin-left: 1px;
             padding-bottom: 3px;
             cursor: pointer;
+            margin-top: 10px;
         }
 
         .navlink {
@@ -217,7 +222,7 @@
             width: 100%;
             justify-content: space-evenly;
             background-color: #ffdf00;
-            padding-top: 10px;
+            padding-top: 5px;
             padding-bottom: 10px;
         }
 
@@ -236,6 +241,78 @@
             margin: auto;
             background-image: linear-gradient(#ffdf00, #009c3b);
             font-size: 12px;
+        }
+
+        @media screen and (max-width:1024px){
+            #abadireita1 {
+                margin-left: 0px;
+            }
+            #pesquisa1 {
+                max-width: 200px;
+            }
+            .navlink {
+                margin-left: 34px;
+            }
+            .navlink2 {
+                font-size: 10px;
+                margin-top: 12px;
+            }
+            #departamentos {
+                font-size: 15px;
+                margin-top: 8px;
+            }
+            #produtos {
+                padding-top: 0px;
+            }
+            #produtos img {
+                margin-top: 10px;
+            }
+        }
+
+        @media screen and (max-width:768px) {
+            #abaesquerda1 {
+                margin-left: 10px;
+            }
+            .abadireita {
+                margin: 9px 11px 0px 0px;
+            }
+            #logo {
+                margin-left: 10px;
+            }
+            #pesquisa1 {
+                margin-left: 5px;
+            }
+            .navlink {
+                margin-left: 17px;
+                margin-top: 10px;
+            }
+            #carrinho picture {
+                margin-left: 17px;
+            }
+            .navlink p {
+                font-size: 13px;
+            }
+            #departamentos {
+                margin-left: 10px;
+            }
+            .navlink2 {
+                font-size: 9px;
+                margin: 12px 9px 0px 0px;
+            }
+            #carrossel {
+                height: 230px;
+            }
+            #carrossel img {
+                height: 230px;
+            }
+            #produtos img {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        @media screen and (max-width:425px) {
+            
         }
     </style>
 </head>
@@ -264,7 +341,7 @@
         <div id="logo"><picture><img src="img/logo.png" alt="Logo do Carrefour"></picture></div>
         <div id="divpesquisa"><input type="text" name="pesquisa" id="pesquisa1" placeholder="Pesquise por produtos ou marcas"><input type="submit" value="&#128269" id="pesquisa2"></div>
         <div class="navlink"><p>Bem-vindo<br>Entre</p></div>
-        <div class="navlink"><p>Meu<br>Carrefour</p></div>
+        <div class="navlink" id="meucarrefour"><p>Meu<br>Carrefour</p></div>
         <div class="navlink"><p>Meus<br>Pedidos</p></div>
         <div class="navlink"><p>Minhas<br>Listas</p></div>
         <div id="carrinho"><picture>🛒</picture></div>
