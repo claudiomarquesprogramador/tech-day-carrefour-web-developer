@@ -72,7 +72,7 @@
         }
 
         .abaesquerda {
-            width: 120px;
+            width: 115px;
             height: 34px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             border-radius: 5px 5px 0px 0px;
@@ -91,7 +91,7 @@
         #abaesquerda1 {
             color: #002776;
             background-color: white;
-            margin-left: 72px;
+            margin-left: 40px;
         }
 
         #abaesquerda2 {
@@ -116,12 +116,13 @@
             align-items: center;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 14px;
-            margin-right: 9px;
+            margin-right: 12px;
             cursor: pointer;
+            text-decoration: underline;
         }
 
         #baixeoapp {
-            margin-right: 80px;
+            margin-right: 40px;
         }
 
         #nav {
@@ -145,11 +146,10 @@
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            margin-left: 80px;
         }
 
-        #logo picture img{
-            width: auto;
+        #logo picture img {
+            width: 100%;
             height: auto;
         }
 
@@ -190,6 +190,7 @@
             font-size: 13px;
             display: flex;
             margin-right: 45px;
+            text-decoration: underline;
         }
 
         #carrinho picture {
@@ -197,7 +198,7 @@
             /*margin: 5px 0px 0px 30px;*/
             display: flex;
             cursor: pointer;
-            margin-right: 80px;
+            margin-right: 40px;
         }
 
         #nav2 {
@@ -208,7 +209,7 @@
         }
 
         #nav2esquerdo {
-            width: 29%;
+            width: 25%;
             height: 40px;
             display: flex;
             justify-content: flex-end;
@@ -224,7 +225,7 @@
         }
 
         #nav2direito {
-            width: 71%;
+            width: 75%;
             height: 40px;
             display: flex;
             align-items: center;
@@ -238,11 +239,12 @@
             font-size: 12px;
             cursor: pointer;
             display: flex;
-            margin-right: 7px;
+            margin-right: 9px;
+            text-decoration: underline;
         }
 
         #cartao {
-            margin-right: 80px;
+            margin-right: 40px;
         }
 
         #carrossel {
@@ -286,22 +288,36 @@
         }
 
         @media screen and (max-width:1025px){
+            #abaesquerda1 {
+                margin-left: 0px;
+            }
+            .abadireita {
+                font-size: 12px;
+            }
             #abadireita1 {
                 margin-left: 0px;
             }
+            #baixeoapp {
+                margin-right: 0px;
+            }
             #pesquisa1 {
-                max-width: 200px;
+                max-width: auto;
             }
             .navlink {
-                margin-left: 34px;
+                margin-left: 0px;
+                margin-right: 33px;
+            }
+            #carrinho picture {
+                margin-right: 0px;
             }
             .navlink2 {
-                font-size: 10px;
-                margin-top: 12px;
+                font-size: 9px;
+            }
+            #cartao {
+                margin-right: 3px;
             }
             #departamentos {
                 font-size: 15px;
-                margin-top: 8px;
             }
             #produtos {
                 padding-top: 0px;
@@ -313,7 +329,7 @@
 
         @media screen and (max-width:768px) {
             #abaesquerda1 {
-                margin-left: 10px;
+                margin-left: 0px;
             }
             .abadireita {
                 margin: 9px 11px 0px 0px;
