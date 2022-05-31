@@ -38,7 +38,7 @@
             display: flex;
             justify-content: flex-end;
             padding-top: 6px;
-            letter-spacing: 0.9px;
+            letter-spacing: 0.8px;
         }
 
         #banner2 {
@@ -597,7 +597,11 @@
         <div><p>Site desenvolvido para o Bootcamp Carrefour Web Developer por <a href="https://github.com/claudiomarquesprogramador" target="_blank">Claudio Marques</a></p></div>
     </footer>
     <script>
-
+        fetch("https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=60841230")
+            .then(resposta => resposta.json())
+            .then(jsonResposta => {
+                console.log(jsonResposta);
+            })
     </script>
 </body>
 </html>
