@@ -1,0 +1,140 @@
+{
+	"info": {
+		"_postman_id": "a1c8ff22-3daf-4e22-845b-839647c7cc20",
+		"name": "Carrefour Tech Day API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8646683"
+	},
+	"item": [
+		{
+			"name": "Find Sellers By CEP",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-VTEX-API-AppKey",
+						"value": "{{X-VTEX-API-AppKey}}",
+						"type": "text"
+					},
+					{
+						"key": "X-VTEX-API-AppToken",
+						"value": "{{X-VTEX-API-AppToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=14801788",
+					"protocol": "https",
+					"host": [
+						"mercado",
+						"carrefour",
+						"com",
+						"br"
+					],
+					"path": [
+						"api",
+						"checkout",
+						"pub",
+						"regions"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "BRA"
+						},
+						{
+							"key": "postalCode",
+							"value": "14801788"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Products By Seller",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-VTEX-API-AppKey",
+						"value": "{{X-VTEX-API-AppKey}}",
+						"type": "text"
+					},
+					{
+						"key": "X-VTEX-API-AppToken",
+						"value": "{{X-VTEX-API-AppToken}}",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://mercado.carrefour.com.br/api/catalog_system/pub/products/search?fq=carrefourbr1056",
+					"protocol": "https",
+					"host": [
+						"mercado",
+						"carrefour",
+						"com",
+						"br"
+					],
+					"path": [
+						"api",
+						"catalog_system",
+						"pub",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "fq",
+							"value": "carrefourbr1056"
+						},
+						{
+							"key": "fq",
+							"value": "C:26",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "X-VTEX-API-AppKey",
+			"value": "vtexappkey-carrefourbr-PZLYPS",
+			"type": "string"
+		},
+		{
+			"key": "X-VTEX-API-AppToken",
+			"value": "UTARJONVBFAYJEOZGNAUZIRIFLMBNUVOOLWNTLIORNRCMGSIVEQFCTNNYOXYGHPUYEVLDHUVPKUHHBDOZPBKMOKGRITGDBXVQBDESIDQJWDANEZSIQVGSCZVEVPLCJVC",
+			"type": "string"
+		}
+	]
+}
