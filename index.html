@@ -241,6 +241,8 @@
             height: 330px;
             background-color: #ffdf00;
             padding-top: 10px;
+            display: flex;
+            position: relative;
         }
 
         #carrossel img {
@@ -249,6 +251,12 @@
             width: 100%;
             height: 330px;
             cursor: pointer;
+            opacity: 0;
+            transition: opacity 800ms;
+        }
+
+        #carrossel img.foco {
+            opacity: 1;
         }
 
         #produtos {
@@ -586,7 +594,7 @@
     </nav>
     <main>
         <div id="carrossel">
-            <img src="img/comercial1.png" alt="Imagens de tvs">
+            <img src="img/comercial1.png" alt="Imagens de tvs" class="foco">
             <img src="img/comercial2.png" alt="Imagens de caixas de som">
             <img src="img/comercial3.png" alt="Imagens de celulares">
             <img src="img/comercial4.png" alt="Imagem da bebida Black & White">
@@ -603,11 +611,35 @@
         <div><p>Site desenvolvido para o Bootcamp Carrefour Web Developer por <a href="https://github.com/claudiomarquesprogramador" target="_blank">Claudio Marques</a></p></div>
     </footer>
     <script>
-        fetch("https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=60841230")
+        /*fetch("https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=60841230")
             .then(response => response.json())
             .then(jsonResposta => {
                 console.log(jsonResposta);
-            })
+            })*/
+        let tempo = 5000;
+        let tempoImagem = 0;
+        let imagens = document.querySelectorAll("#carrossel img");
+        let max = imagens.length;
+        
+        function proximaImagem() {
+            imagens[tempoImagem]
+                .classList.remove("foco")
+
+            tempoImagem++
+
+            if(tempoImagem >= max)
+                tempoImagem = 0
+
+            imagens[tempoImagem]
+                .classList.add("foco")
+        }
+
+        function comecar() {
+            setInterval(() => {
+                proximaImagem()
+            }, tempo)
+        }
+        window.addEventListener("load", comecar);
     </script>
 </body>
 </html>
