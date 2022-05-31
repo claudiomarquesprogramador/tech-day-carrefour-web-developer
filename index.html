@@ -306,7 +306,7 @@
             }
         }
 
-        @media screen and (max-width:769px) {
+        @media screen and (max-width:800px) {
             .abaesquerda {
                 width: auto;
                 padding-left: 5px;
@@ -362,7 +362,7 @@
             }
         }
 
-        @media screen and (max-width:426px) {
+        @media screen and (max-width:500px) {
             #aba {
                 height: 30px;
             }
@@ -401,7 +401,7 @@
             }
             #navdireita1 p {
                 margin-right: 5px;
-                font-size: 12px;
+                font-size: 11px;
             }
             #carrinho picture {
                 margin-right: 5px;
@@ -442,7 +442,7 @@
             }
         }
 
-        @media screen and (max-width:376px) {
+        @media screen and (max-width:400px) {
             .abaesquerda {
                 font-size: 8px;
                 width: auto;
@@ -478,9 +478,12 @@
                 width: 150px;
                 height: 150px;
             }
+            #footer {
+                font-size: 9px;
+            }
         }
 
-        @media screen and (max-width:321px) {
+        @media screen and (max-width:355px) {
             .abaesquerda {
                 font-size: 7px;
                 margin-right: 2px;
@@ -598,7 +601,7 @@
     </footer>
     <script>
         fetch("https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=60841230")
-            .then(resposta => resposta.json())
+            .then(response => response.json())
             .then(jsonResposta => {
                 console.log(jsonResposta);
             })
