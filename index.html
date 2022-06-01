@@ -464,14 +464,14 @@
                 margin-right: 5px;
             }
             #navdireita1 p {
-                font-size: 10px;
+                font-size: 9px;
                 margin-right: 2px;
             }
             #carrinho picture {
                 font-size: 18px;
             }
             #departamentos p {
-                font-size: 7px;
+                font-size: 6.5px;
             }
             #moveis {
                 display: none;
@@ -518,12 +518,12 @@
                 font-size: 16px;
             }
             #departamentos p {
-                font-size: 6.1px;
+                font-size: 5.8px;
                 margin-left: 5px;
             }
             .navlink2 {
                 margin-right: 5px;
-                font-size: 8px;
+                font-size: 7px;
             }
             #carrossel {
                 height: 120px;
@@ -611,11 +611,6 @@
         <div><p>Site desenvolvido para o Bootcamp Carrefour Web Developer por <a href="https://github.com/claudiomarquesprogramador" target="_blank">Claudio Marques</a></p></div>
     </footer>
     <script>
-        /*fetch("https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=60841230")
-            .then(response => response.json())
-            .then(jsonResposta => {
-                console.log(jsonResposta);
-            })*/
         let tempo = 5000;
         let tempoImagem = 0;
         let imagens = document.querySelectorAll("#carrossel img");
@@ -640,6 +635,8 @@
             }, tempo)
         }
         window.addEventListener("load", comecar);
+        
+        fetch('https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=60841230')
     </script>
 </body>
 </html>
