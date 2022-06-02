@@ -550,7 +550,7 @@
         <div id="aba">
             <div id="abaesquerda">
                 <div id="abaesquerda1" class="abaesquerda">📺 SHOPPING</div>
-                <div id="abaesquerda2" class="abaesquerda">🏪 MERCADO</div>
+                <div id="abaesquerda2" class="abaesquerda" onclick="abrirMercado()">🏪 MERCADO</div>
                 <div id="abaesquerda3" class="abaesquerda">📦 SERVIÇOS</div>
             </div>
             <div id="abadireita">
@@ -592,6 +592,11 @@
             <div class="navlink2" id="cartao"><p>Cartão Carrefour</p></div>
         </div>
     </nav>
+    <section id="mercado">
+        <div>
+            
+        </div>
+    </section>
     <main>
         <div id="carrossel">
             <img src="img/comercial1.png" alt="Imagens de tvs" class="foco">
@@ -610,7 +615,9 @@
     <footer id="footer">
         <div><p>Site desenvolvido para o Bootcamp Carrefour Web Developer por <a href="https://github.com/claudiomarquesprogramador" target="_blank">Claudio Marques</a></p></div>
     </footer>
+
     <script>
+        //começo do carrossel
         let tempo = 5000;
         let tempoImagem = 0;
         let imagens = document.querySelectorAll("#carrossel img");
@@ -634,9 +641,28 @@
                 proximaImagem()
             }, tempo)
         }
-        window.addEventListener("load", comecar);
+        //*window.addEventListener("load", comecar);
+        // final do carrossel
         
-        fetch('https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=60841230')
+        //começo de buscar cep
+
+        function abrirMercado() {
+            let pergunta = prompt("Digite seu CEP!","Apenas números.");
+            fetch(`https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=${pergunta}`, dadosApi)
+            .then(response => response.json())
+            .then(data)
+        }
+        /*
+        const dadosApi = {
+            method: 'GET',
+            mode:'cors',
+            cache:'default'
+        }
+        
+        fetch("https://mercado.carrefour.com.br/api/checkout/pub/regions?country=BRA&postalCode=60841230", dadosApi)
+            .then(response => response.json())
+            .then(data => console.log(data))
+        */
     </script>
 </body>
 </html>
