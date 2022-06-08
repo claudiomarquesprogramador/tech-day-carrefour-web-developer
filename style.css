@@ -554,7 +554,7 @@
     }
 }
 
-@media screen and (max-width:426px) {
+@media screen and (max-width:450px) {
     #aba {
         height: 30px;
     }
@@ -669,7 +669,7 @@
     }
 }
 
-@media screen and (max-width:394px) {
+@media screen and (max-width:400px) {
     .abaesquerda {
         font-size: 8px;
         width: auto;
@@ -717,7 +717,7 @@
         font-size: 9px;
     }
     #departamentos {
-        font-size: 8.5px;
+        font-size: 8px;
     }
     .navlink2 {
         font-size: 8.5px;
