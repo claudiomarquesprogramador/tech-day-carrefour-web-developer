@@ -554,7 +554,7 @@
     }
 }
 
-@media screen and (max-width:450px) {
+@media screen and (max-width:460px) {
     #aba {
         height: 30px;
     }
@@ -669,7 +669,7 @@
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:410px) {
     .abaesquerda {
         font-size: 8px;
         width: auto;
@@ -728,7 +728,7 @@
         }
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:330px) {
     #banner1 p {
         letter-spacing: 0px;
 }
